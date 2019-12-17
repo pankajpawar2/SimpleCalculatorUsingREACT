@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
+import Result from './Result';
+import Number from './Number';
+import Operator from './Operator';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    result: ""
+  }
+
+  changeResult = (value) => {
+    this.setState({
+      result: this.state.result+value
+    })
+  }
+
+  clearResult = () => {
+    this.setState({
+      result: ""
+    })
+  }
+
+  render()
+  {
+    return (
+      <div className="App">
+        <Result result={this.state.result}/>
+        <div className="NumberOperator">
+          <Number result={this.changeResult} clearResult={this.clearResult} stateResult={this.state.result}/>
+          <Operator result={this.changeResult} />
+        </div>
+      </div>
+    );
+  }
+  
 }
 
 export default App;

@@ -1,0 +1,16 @@
+.Operatordiv {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+}
+
+.Mybutton {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background: rgb(216, 188, 28);
+  margin: 5px;
+  font-size: larger;
+}

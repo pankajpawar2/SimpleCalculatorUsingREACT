@@ -1,0 +1,16 @@
+.Mybutton {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background: rgb(202, 206, 7);
+  margin: 5px;
+  font-size: larger;
+}
+
+.Numberdiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 3;
+  border: 1px solid rgb(139, 134, 134);
+}
